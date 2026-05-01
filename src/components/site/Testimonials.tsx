@@ -4,28 +4,28 @@ import { Quote, Star } from "lucide-react";
 const items = [
   {
     quote:
-      "Nishant didn't just host our annual summit — he elevated it. Effortless transitions, perfect tone, and our CEO can't stop talking about him.",
+      "Nishant made the barat the most talked-about part of our wedding. It was a rollercoaster of emotions and fun.",
     name: "Priya Sharma",
-    role: "Head of Brand, FinEdge",
-    event: "Corporate Summit",
+    role: "Event Manager",
+    event: "Barat on wheels",
   },
   {
-    quote: "Our wedding felt like a movie. Every entry, every game, every emotional moment — he timed it like magic.",
+    quote: "Our wedding felt like a movie. Every entry, every game, every emotional moment - he timed it like magic.",
     name: "Aarav & Diya Mehra",
     role: "Newlyweds",
     event: "Wedding Reception",
   },
   {
-    quote: "8,000 students, three days, zero dull moments. Best campus host we've ever booked, hands down.",
-    name: "Rohan Kapoor",
-    role: "Cultural Secretary, Resonance Fest",
-    event: "College Festival",
+    quote: "Three days, zero dull moments. Best host we've ever booked, hands down.",
+    name: "Rohit & Sneha",
+    role: "25th wedding anniversary celebration",
+    event: "25th wedding anniversary celebrationl",
   },
   {
     quote: "Refined, witty and razor-sharp. He understood our brand voice in one call and delivered way beyond brief.",
-    name: "Naina Iyer",
-    role: "Marketing Director, Aurum Watches",
-    event: "Product Launch",
+    name: "Naina & Arjun",
+    role: "Newlyweds",
+    event: "Haldi, Sangeet & Wedding",
   },
 ];
 

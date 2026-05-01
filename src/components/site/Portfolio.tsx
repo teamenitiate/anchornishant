@@ -1,8 +1,12 @@
 import { useState } from "react";
-import corp from "@/assets/event-corporate.jpg";
-import wed from "@/assets/event-wedding.jpg";
-import coll from "@/assets/event-college.jpg";
-import priv from "@/assets/event-private.jpg";
+import corp from "@/assets/img2.jpeg";
+import wed from "@/assets/img1.jpeg";
+import priv from "@/assets/s2.jpeg";
+import ni from "@/assets/s3.jpeg";
+import nis from "@/assets/s4.jpeg";
+import nish from "@/assets/s5.jpeg";
+import nisha from "@/assets/img3.jpeg";
+import nishan from "@/assets/clg.jpg";
 import { Reveal } from "./Reveal";
 import { X, MapPin, Calendar, Users } from "lucide-react";
 
@@ -13,50 +17,86 @@ type Event = {
   image: string;
   desc: string;
   highlights: string[];
-  meta: { location: string; year: string; audience: string };
+  meta: {year: string;};
+  noModal?: boolean;
 };
 
 const events: Event[] = [
   {
     id: "corp",
-    title: "Annual Vision Summit",
-    category: "Corporate",
+    title: "Not just a haldi… it was a vibe",
+    category: "Haldi",
     image: corp,
-    desc: "Hosted a 2,000-strong leadership summit with seamless segments — keynote intros, awards, panel moderation and a live Q&A with the CEO.",
-    highlights: ["Bilingual MC across 6 hours", "Live Q&A with C-suite", "Award ceremony for 40+ winners"],
-    meta: { location: "Mumbai", year: "2024", audience: "2,000 guests" },
+    desc: "Kept the energy high with fun games, crowd interaction, and nonstop entertainment.Made sure every moment was filled with laughter, music, and pure celebration.",
+    highlights: ["Interactive games & quizzes | Dance-offs & flash mobs | Heartfelt speeches & toasts"],
+    meta: {year: "2025"},
   },
   {
     id: "wed",
-    title: "The Mehra Reception",
-    category: "Weddings",
+    title: "A carnival full of colors, chaos & crazy energy 🎡✨",
+    category: "Carnival",
     image: wed,
-    desc: "A grand wedding reception blending family rituals with cinematic introductions, dance segments and heartfelt anecdotes.",
-    highlights: ["Bride & groom cinematic entry", "Family games & sangeet", "Surprise tributes"],
-    meta: { location: "Udaipur", year: "2024", audience: "850 guests" },
-  },
-  {
-    id: "coll",
-    title: "Resonance Fest",
-    category: "College Fests",
-    image: coll,
-    desc: "Three-day college fest finale with 8,000 students, indie bands and a celebrity headliner — energy that did not drop for a second.",
-    highlights: ["8K crowd hype-up", "Band intros & call-outs", "On-stage games"],
-    meta: { location: "Pune", year: "2023", audience: "8,000 students" },
+    desc: "Made sure the carnival stayed alive, energetic, and unforgettable till the very end.",
+    highlights: ["Bride & groom cinematic entry | Family games | Surprise tributes"],
+    meta: {year: "2025"},
   },
   {
     id: "priv",
-    title: "Glasshouse Soirée",
-    category: "Private Shows",
+    title: "Where moments turned into memories",
+    category: "Carnival",
     image: priv,
-    desc: "Intimate luxury private celebration — refined storytelling, curated banter, and personalized guest moments.",
-    highlights: ["Tailored guest spotlights", "Whisky-pairing segment", "Live auction hosting"],
-    meta: { location: "Delhi", year: "2024", audience: "120 guests" },
+    desc: "Kept the energy high and the crowd hooked from start to finish. With a mix of humor, heartfelt moments, and interactive segments, I made sure every guest felt involved and entertained.",
+    highlights: [""],
+    meta: { year: "2026",},
   },
+  {
+    id: "priv",
+    title: "Left the stage louder than ever 🎤🔥",
+    category: "Carnival",
+    image: ni,
+    desc: "Built a rhythm the crowd couldn’t resist - every moment flowed with energy and excitement. From fun interactions to full-blown hype, the carnival stayed alive till the very end.",
+    highlights: ["On-Stage Games | Interactive Acts | Fun Segments"],
+    meta: { year: "2025",},
+  },
+  {
+    id: "priv",
+    title: "From First Dance to Last Cheer - Every Moment Elevated",
+    category: "Sangeet Night",
+    image: nis,
+    desc: "From emotional first dances to high-energy performances, every moment was crafted to keep the vibe alive. Seamless hosting, crowd engagement, and nonstop energy made the night truly unforgettable.",
+    highlights: ["Live Interaction | Energy Flow"],
+    meta: { year: "2024",},
+  },
+  {
+    id: "priv",
+    title: "From Streets to Beats - The Baraat Took Over the City",
+    category: "Barat On Wheels",
+    image: nish,
+    desc: "The baraat was not just a procession, it was a moving party that took over the streets. With high-energy hosting, interactive segments, and nonstop entertainment, I made sure the baraat was the highlight of the wedding celebrations.",
+    highlights: ["Dhol Beats | Road Dance | Crowd Hype"],
+    meta: { year: "2026",},
+  },
+  {
+    id: "priv",
+    title: "An Evening Draped in Elegance, Where Every Moment Felt Royal",
+    category: "Sangeet Night",
+    image: nisha,
+    desc: "Set against a night of grandeur, every performance unfolded like a story of love, rhythm, and celebration. With seamless flow and elevated energy, the sangeet transformed into a regal experience to remember.",
+    highlights: ["Royal Performances", "Elegant Flow", "Grand Celebrations"],
+    meta: { year: "2025",},
+  },
+  {
+    id: "priv",
+    title: "& Many more unforgettable moments..",
+    category: "",
+    image: nishan,
+    desc: "",
+    highlights: [""],
+    meta: { year: "",},
+    noModal: true,
+  },
+  
 ];
-
-const categories = ["All", "Corporate", "Weddings", "College Fests", "Private Shows"];
-
 export function Portfolio() {
   const [filter, setFilter] = useState("All");
   const [active, setActive] = useState<Event | null>(null);
@@ -77,52 +117,64 @@ export function Portfolio() {
               </h2>
             </Reveal>
           </div>
-          <Reveal delay={200}>
-            <div className="flex flex-wrap gap-2">
-              {categories.map((c) => (
-                <button
-                  key={c}
-                  onClick={() => setFilter(c)}
-                  className={`px-4 py-2 rounded-full text-sm transition-all ${
-                    filter === c
-                      ? "bg-gradient-gold text-primary-foreground font-semibold"
-                      : "glass text-muted-foreground hover:text-foreground"
-                  }`}
-                >
-                  {c}
-                </button>
-              ))}
-            </div>
-          </Reveal>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[280px]">
-          {filtered.map((e, i) => (
-            <Reveal key={e.id} delay={i * 100} className={i === 0 ? "md:col-span-2 lg:row-span-2 lg:col-span-2" : ""}>
-              <button
-                onClick={() => setActive(e)}
-                className="group relative w-full h-full rounded-3xl overflow-hidden text-left gold-ring focus:outline-none"
-              >
-                <img
-                  src={e.image}
-                  alt={e.title}
-                  loading="lazy"
-                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
-                  <span className="inline-block text-[10px] uppercase tracking-[0.3em] text-primary mb-2">
-                    {e.category}
-                  </span>
-                  <h3 className="font-display text-xl sm:text-2xl lg:text-3xl">{e.title}</h3>
-                  <p className="mt-1 text-sm text-muted-foreground">{e.meta.location} · {e.meta.year}</p>
-                </div>
-                <div className="absolute top-4 right-4 glass rounded-full px-3 py-1 text-xs opacity-0 group-hover:opacity-100 transition-opacity">
-                  View →
-                </div>
-              </button>
-            </Reveal>
-          ))}
+          {filtered.map((e, i) => {
+            const isDisabled = !!e.noModal;
+            return (
+              <Reveal key={e.id + i} delay={i * 100} className={i === 0 ? "md:col-span-2 lg:row-span-2 lg:col-span-2" : ""}>
+                {isDisabled ? (
+                  <div
+                    aria-disabled="true"
+                    tabIndex={-1}
+                    className="group relative w-full h-full rounded-3xl overflow-hidden text-left gold-ring focus:outline-none cursor-default pointer-events-none"
+                  >
+                    <img
+                      src={e.image}
+                      alt={e.title}
+                      loading="lazy"
+                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
+                    <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
+                      <span className="inline-block text-[10px] uppercase tracking-[0.3em] text-primary mb-2">
+                        {e.category}
+                      </span>
+                      <h3 className="font-display text-xl sm:text-2xl lg:text-3xl">{e.title}</h3>
+                      <p className="mt-1 text-sm text-muted-foreground"></p>
+                    </div>
+                    <div className="absolute top-4 right-4 glass rounded-full px-3 py-1 text-xs opacity-0 transition-opacity">
+                      View →
+                    </div>
+                  </div>
+                ) : (
+                  <button
+                    onClick={() => setActive(e)}
+                    className="group relative w-full h-full rounded-3xl overflow-hidden text-left gold-ring focus:outline-none"
+                  >
+                    <img
+                      src={e.image}
+                      alt={e.title}
+                      loading="lazy"
+                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
+                    <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
+                      <span className="inline-block text-[10px] uppercase tracking-[0.3em] text-primary mb-2">
+                        {e.category}
+                      </span>
+                      <h3 className="font-display text-xl sm:text-2xl lg:text-3xl">{e.title}</h3>
+                      <p className="mt-1 text-sm text-muted-foreground"></p>
+                    </div>
+                    <div className="absolute top-4 right-4 glass rounded-full px-3 py-1 text-xs opacity-0 group-hover:opacity-100 transition-opacity">
+                      View →
+                    </div>
+                  </button>
+                )}
+              </Reveal>
+            );
+          })}
         </div>
       </div>
 
@@ -148,9 +200,8 @@ export function Portfolio() {
               <span className="text-xs uppercase tracking-[0.3em] text-primary">{active.category}</span>
               <h3 className="font-display text-3xl sm:text-4xl mt-2">{active.title}</h3>
               <div className="flex flex-wrap gap-4 mt-4 text-sm text-muted-foreground">
-                <span className="inline-flex items-center gap-1.5"><MapPin size={14} className="text-primary" />{active.meta.location}</span>
                 <span className="inline-flex items-center gap-1.5"><Calendar size={14} className="text-primary" />{active.meta.year}</span>
-                <span className="inline-flex items-center gap-1.5"><Users size={14} className="text-primary" />{active.meta.audience}</span>
+              
               </div>
               <p className="mt-5 text-muted-foreground leading-relaxed">{active.desc}</p>
               <ul className="mt-5 space-y-2">

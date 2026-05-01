@@ -13,7 +13,7 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Nishant Chandnani — Premium Event Anchor & Host" },
+      { title: "Nishant Chandnani" },
       {
         name: "description",
         content:

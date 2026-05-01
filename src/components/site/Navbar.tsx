@@ -7,7 +7,6 @@ const links = [
   { id: "portfolio", label: "Portfolio" },
   { id: "videos", label: "Reels" },
   { id: "testimonials", label: "Praise" },
-  { id: "brands", label: "Brands" },
   { id: "book", label: "Book" },
 ];
 
@@ -45,7 +44,6 @@ export function Navbar() {
       <div className={`mx-auto max-w-7xl px-4 sm:px-6 lg:px-8`}>
         <div className={`flex items-center justify-between rounded-2xl px-4 sm:px-6 py-3 transition-all duration-500 ${scrolled ? "glass-strong" : ""}`}>
           <button onClick={() => go("home")} className="flex items-center gap-2 group">
-            <span className="grid place-items-center h-9 w-9 rounded-full bg-gradient-gold text-primary-foreground font-display font-bold">N</span>
             <span className="font-display text-lg tracking-wide">
               Nishant <span className="text-gradient-gold">Chandnani</span>
             </span>

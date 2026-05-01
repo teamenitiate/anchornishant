@@ -2,8 +2,8 @@ import { useState, type FormEvent } from "react";
 import { Reveal } from "./Reveal";
 import { Mail, Instagram, Linkedin, MessageCircle, Send, Phone } from "lucide-react";
 
-const WHATSAPP = "919999999999"; // placeholder
-const EMAIL = "hello@nishantchandnani.com";
+const WHATSAPP = "919131094624";
+const EMAIL = "teamenitiate@gmail.com";
 
 export function Booking() {
   const [sent, setSent] = useState(false);
@@ -12,7 +12,7 @@ export function Booking() {
   const onSubmit = (e: FormEvent) => {
     e.preventDefault();
     const text = encodeURIComponent(
-      `Hi Nishant! I'd like to book you.%0A%0AName: ${form.name}%0AEmail: ${form.email}%0AEvent: ${form.type}%0ADate: ${form.date}%0A%0A${form.message}`
+      `Hi Nishant! My name is ${form.name}, ]\and I came across your work & would like to book you for our Event : ${form.type} with Date: ${form.date} , ${form.message}, Email: ${form.email}`
     );
     window.open(`https://wa.me/${WHATSAPP}?text=${text}`, "_blank");
     setSent(true);
@@ -40,7 +40,7 @@ export function Booking() {
             </Reveal>
             <Reveal delay={200}>
               <p className="mt-6 text-muted-foreground text-lg leading-relaxed">
-                From corporate stages to grand celebrations — drop the details and I'll get back within 24 hours.
+                From corporate stages to grand celebrations - drop the details and I'll get back within 24 hours.
                 For instant replies, hit WhatsApp.
               </p>
             </Reveal>
@@ -54,7 +54,7 @@ export function Booking() {
                   </span>
                   <div>
                     <p className="text-xs uppercase tracking-wider text-primary">Instant Booking</p>
-                    <p className="font-medium">WhatsApp +91 99999 99999</p>
+                    <p className="font-medium">WhatsApp +91 91310 94624</p>
                   </div>
                 </a>
                 <a href={`mailto:${EMAIL}`}
@@ -73,8 +73,7 @@ export function Booking() {
             <Reveal delay={400}>
               <div className="mt-8 flex gap-3">
                 {[
-                  { Icon: Instagram, href: "#" },
-                  { Icon: Linkedin, href: "#" },
+                  { Icon: Instagram, href: "https://www.instagram.com/anchornishantofficial/" },
                   { Icon: Phone, href: `tel:+${WHATSAPP}` },
                 ].map(({ Icon, href }, i) => (
                   <a key={i} href={href} className="grid place-items-center h-11 w-11 rounded-full glass hover:bg-gradient-gold hover:text-primary-foreground transition-colors">

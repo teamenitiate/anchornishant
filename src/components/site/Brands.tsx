@@ -1,8 +1,8 @@
 import { Reveal } from "./Reveal";
 
 const brands = [
-  "AURUM", "FINEDGE", "NOVA TECH", "STELLAR", "ORION", "VANTA",
-  "LUXEHAUS", "MERIDIAN", "ECLIPSE", "ARCANE", "ZENITH", "MONARCH",
+  "Yessssiirrr","Yessssiirrr","Yessssiirrr","Yessssiirrr",
+  "Yessssiirrr","Yessssiirrr","Yessssiirrr","Yessssiirrr",
 ];
 
 export function Brands() {

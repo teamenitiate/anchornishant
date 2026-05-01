@@ -1,4 +1,4 @@
-import heroImg from "@/assets/hero-anchor.jpg";
+import heroImg from "@/assets/nc.jpeg";
 import { ArrowRight, Play, Sparkles } from "lucide-react";
 import { CountUp, Reveal } from "./Reveal";
 
@@ -8,18 +8,6 @@ export function Hero() {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-28 pb-20">
-      {/* Background image */}
-      <div className="absolute inset-0 -z-10">
-        <img
-          src={heroImg}
-          alt="Nishant Chandnani hosting on a grand stage"
-          className="h-full w-full object-cover object-center scale-105"
-          fetchPriority="high"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/60" />
-      </div>
-
       {/* Floating glow orbs */}
       <div className="absolute top-1/4 -right-32 h-96 w-96 rounded-full bg-primary/20 blur-3xl animate-float" />
       <div className="absolute bottom-1/4 -left-32 h-80 w-80 rounded-full bg-accent/15 blur-3xl animate-float" style={{ animationDelay: "2s" }} />
@@ -67,23 +55,6 @@ export function Hero() {
                 View My Work
               </button>
             </div>
-          </Reveal>
-
-          <Reveal delay={520}>
-            <dl className="mt-16 grid grid-cols-3 gap-4 sm:gap-8 max-w-xl">
-              {[
-                { n: 500, l: "Events Hosted" },
-                { n: 250, l: "Happy Clients" },
-                { n: 8, l: "Years Experience", s: "+" },
-              ].map((s) => (
-                <div key={s.l} className="glass rounded-2xl p-4 sm:p-5">
-                  <dt className="text-2xl sm:text-4xl font-display text-gradient-gold">
-                    <CountUp to={s.n} suffix={s.s ?? "+"} />
-                  </dt>
-                  <dd className="mt-1 text-xs sm:text-sm text-muted-foreground uppercase tracking-wider">{s.l}</dd>
-                </div>
-              ))}
-            </dl>
           </Reveal>
         </div>
       </div>

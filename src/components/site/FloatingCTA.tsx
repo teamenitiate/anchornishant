@@ -13,7 +13,7 @@ export function FloatingCTA() {
 
   return (
     <a
-      href="https://wa.me/919999999999"
+      href="https://wa.me/919131094624"
       target="_blank"
       rel="noreferrer"
       className={`fixed bottom-5 right-5 z-50 inline-flex items-center gap-2 bg-gradient-gold text-primary-foreground font-semibold pl-4 pr-5 py-3 rounded-full shadow-[0_15px_40px_-10px_oklch(0.82_0.14_82/0.7)] transition-all duration-500 ${

@@ -1,12 +1,12 @@
-import portrait from "@/assets/about-portrait.jpg";
+import portrait from "@/assets/nc.jpeg";
 import { Reveal } from "./Reveal";
 import { Mic2, Flame, Users, Sparkles } from "lucide-react";
 
 const traits = [
   { icon: Flame, title: "High Energy", text: "I bring the spark that lifts a room from curious to electric." },
-  { icon: Users, title: "Crowd Control", text: "Reading the audience, steering the moment — effortlessly." },
+  { icon: Users, title: "Crowd Control", text: "Reading the audience, steering the moment - effortlessly." },
   { icon: Mic2, title: "Versatile Voice", text: "Corporate gravitas, wedding warmth, festival fire." },
-  { icon: Sparkles, title: "Quick Wit", text: "Humor that lands — never forced, always tasteful." },
+  { icon: Sparkles, title: "Quick Wit", text: "Humor that lands - never forced, always tasteful." },
 ];
 
 export function About() {
@@ -24,7 +24,7 @@ export function About() {
               </div>
               <div className="absolute -bottom-6 -right-4 sm:-right-6 glass-strong rounded-2xl px-5 py-4 max-w-[220px]">
                 <p className="text-xs uppercase tracking-wider text-primary">Signature</p>
-                <p className="font-display italic text-sm mt-1">"I don't just host events — I create unforgettable moments."</p>
+                <p className="font-display italic text-sm mt-1">"I don't just host events - I create unforgettable moments."</p>
               </div>
             </div>
           </Reveal>
@@ -42,13 +42,15 @@ export function About() {
             <Reveal delay={200}>
               <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  From college fest stages to billion-rupee corporate galas, Nishant has spent the last decade
-                  turning rooms into rooms-on-fire. What started as a dare to grab the mic at a campus event has
-                  grown into a craft — and a calling.
-                </p>
-                <p>
-                  His style? Confident without ego. Humorous without filler. Polished without losing the heart.
-                  He reads a crowd like a conductor reads an orchestra — and brings every guest into the rhythm.
+                  Hi, I’m Nishant Chandnani - a professional event anchor who believes that every event deserves to be more than just well-managed… it should be truly memorable.
+
+                  For me, anchoring is not just about being on stage, it’s about creating a connection. I love engaging with people, understanding the vibe of the audience, and turning that energy into something exciting and unforgettable. Whether it’s a corporate event, a wedding celebration, or a college fest, I bring a balance of professionalism, spontaneity, and entertainment to every stage I step on.
+
+                  Over time, I’ve learned that no two events are ever the same. That’s why I don’t follow a fixed style, I adapt, improvise, and tailor my hosting to suit the audience, the occasion, and the overall mood of the event. From high-energy crowd interactions to smooth and seamless event flow, I make sure everything feels natural and perfectly timed.
+
+                  What truly drives me is the joy of seeing people engaged, smiling, and fully enjoying the moment. I take pride in creating an atmosphere where the audience feels connected, the organizers feel confident, and the event leaves a lasting impression on everyone involved.
+
+                  My goal is simple - not just to host your event, but to elevate it into an experience that people remember long after it’s over.
                 </p>
               </div>
             </Reveal>
